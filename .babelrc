@@ -1,0 +1,31 @@
+{
+    "presets": [
+        ["env", {
+            "loose": true,
+            "useBuiltIns": true,
+            "targets": {
+                "firefox": 38,
+                "ie": 11,
+                "edge": 11,
+                "safari": 9,
+                "chrome": 42
+            }
+        }],
+        "react",
+        "stage-0"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        },
+        "production": {
+            "plugins": [
+                "transform-react-remove-prop-types",
+                "transform-react-jsx",
+                "babel-plugin-transform-react-remove-prop-types"
+            ]
+        }
+      }
+}
